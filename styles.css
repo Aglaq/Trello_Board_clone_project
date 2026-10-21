@@ -34,4 +34,29 @@ h6 {
 body {
   font-family: "Helvetica", "Arial", sans-serif;
   color: black;
+  background-image: url("images/background.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+#mainbar,
+#mainbar div,
+#cards-container,
+#navbar,
+#navbar div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#mainbar {
+  background: rgb(0 0 0 / 20%);
+}
+
+button {
+  color: white;
+  font-size: 20px;
+  background-color: black;
 }
