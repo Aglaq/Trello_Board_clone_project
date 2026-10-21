@@ -38,8 +38,13 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  height: 100vh;
+  max-height: 100vh;
   box-sizing: border-box;
+}
+
+h3 {
+  font-weight: normal;
+  padding: 10px 0;
 }
 
 #headbar,
@@ -50,6 +55,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#cards-container {
+  align-items: start;
 }
 
 #headbar div {
@@ -83,7 +92,6 @@ button,
 }
 
 .card {
-  /* border: 2px solid black; */
   border-radius: 5px;
   min-width: calc(25vw - 40px);
   margin: 20px;
@@ -91,6 +99,8 @@ button,
   box-sizing: border-box;
   background-color: lightgray;
   color: black;
+  overflow: scroll;
+  max-height: calc(100vh - 200px);
 }
 
 .card-button {
@@ -100,14 +110,80 @@ button,
 
 .tile {
   border-radius: 5px;
-  margin: 20px;
-  padding: 20px;
+  margin: 10px;
+  padding: 10px;
   box-sizing: border-box;
   background-color: white;
   color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.human-picture {
+  width: 50px;
+  height: auto;
+  align-self: end;
+}
+
+.colors-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 2px;
+}
+
+.color {
+  width: 50px;
+  height: 10px;
+  border-radius: 4px;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: rgb(240, 236, 0);
+}
+
+.orange {
+  background-color: orange;
+}
+
+.red {
+  background-color: red;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.lightblue {
+  background-color: lightblue;
+}
+
+.lightgreen {
+  background-color: lightgreen;
+}
+
+.pink {
+  background-color: pink;
+}
+
+.gray {
+  background-color: gray;
 }
 
 .white-svg {
-  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(90deg) brightness(100%)
-    contrast(100%);
+  filter: invert(100%) hue-rotate(90deg) brightness(100%) contrast(100%);
+}
+
+.gray-svg {
+  filter: invert(100%) brightness(60%);
+  align-self: flex-start;
+  width: 20px;
+  height: auto;
 }
