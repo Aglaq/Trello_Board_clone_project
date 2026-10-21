@@ -7,34 +7,82 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="mainbar">
+    <div id="headbar">
       <div>
-        <button>🀆 Boards</button>
-        <form class="search" action="">
-          <input type="text" placeholder="Search..." name="search" />
+        <button>❐ Boards</button>
+        <form id="searchbar" action="">
+          <input id="search" type="text" name="search" />
+          <img
+            class="white-svg"
+            class="search-icon"
+            src="./images/magnifying-glass.svg"
+            height="50"
+          />
         </form>
       </div>
       <img src="./images/trello-logo.svg" alt="trello logo" height="50" />
-      <div>
-        <button>✚</button>
+      <div id="button-list">
+        <button>+</button>
         <button>NAME</button>
         <button>ℹ︎</button>
-        <button>☗</button>
+        <button>♠︎</button>
         <button>⚙︎</button>
       </div>
     </div>
     <div id="cards-section">
       <div id="navbar">
         <div>
-          <img src="./images/plane-logo.svg" alt="plane logo" height="50" />
+          <img
+            class="white-svg"
+            src="./images/plane-logo.svg"
+            alt="plane logo"
+            height="50"
+          />
           <h1>Company Overview</h1>
-          <a>Travidux</a>
-          <a>Star</a>
-          <a>Team Visible</a>
+          <div class="link-with-img">
+            <img
+              class="white-svg"
+              src="./images/suitcase.svg"
+              alt="trello logo"
+              height="30"
+            />
+            <a>Travidux</a>
+          </div>
+          <img
+            class="white-svg"
+            src="./images/star1.svg"
+            alt="trello logo"
+            height="30"
+          />
+          <div class="link-with-img">
+            <img
+              class="white-svg"
+              src="./images/people.svg"
+              alt="trello logo"
+              height="30"
+            />
+            <a> Team Visible</a>
+          </div>
         </div>
         <div>
-          <a>Join Me</a>
-          <a>Show Menu</a>
+          <div class="link-with-img">
+            <img
+              class="white-svg"
+              src="./images/messages.svg"
+              alt="trello logo"
+              height="30"
+            />
+            <a> Join Me</a>
+          </div>
+          <div class="link-with-img">
+            <img
+              class="white-svg"
+              src="./images/three_dots.svg"
+              alt="trello logo"
+              height="30"
+            />
+            <a>Show Menu</a>
+          </div>
         </div>
       </div>
       <div id="cards-container">
