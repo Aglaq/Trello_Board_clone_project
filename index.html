@@ -9,21 +9,25 @@
   <body>
     <div id="headbar">
       <div>
-        <button>❐ Boards</button>
+        <button>❐Boards</button>
         <form id="searchbar" action="">
           <input id="search" type="text" name="search" />
           <img
             class="white-svg"
-            class="search-icon"
+            id="search-icon"
             src="./images/magnifying-glass.svg"
-            height="50"
           />
         </form>
       </div>
-      <img src="./images/trello-logo.svg" alt="trello logo" height="50" />
+      <img id="logo" src="./images/trello-logo.svg" alt="trello logo" />
       <div id="button-list">
         <button>+</button>
-        <button>NAME</button>
+        <img
+          id="profile-picture"
+          src="./images/human1.jpg"
+          alt="face of a woman"
+        />
+        <button>Chanelle</button>
         <button>ℹ︎</button>
         <button>♠︎</button>
         <button>⚙︎</button>
@@ -32,14 +36,16 @@
     <div id="cards-section">
       <div id="navbar">
         <div>
-          <img
-            class="white-svg"
-            src="./images/plane-logo.svg"
-            alt="plane logo"
-            height="50"
-          />
-          <h1>Company Overview</h1>
-          <div class="link-with-img">
+          <div class="item-text-pair">
+            <img
+              class="white-svg"
+              src="./images/plane-logo.svg"
+              alt="plane logo"
+              height="50"
+            />
+            <h1>Company Overview</h1>
+          </div>
+          <div class="item-text-pair">
             <img
               class="white-svg"
               src="./images/suitcase.svg"
@@ -54,7 +60,7 @@
             alt="trello logo"
             height="30"
           />
-          <div class="link-with-img">
+          <div class="item-text-pair">
             <img
               class="white-svg"
               src="./images/people.svg"
@@ -87,7 +93,10 @@
       </div>
       <div id="cards-container">
         <div class="card">
-          <h2>Teams</h2>
+          <div class="card-title">
+            <h2>Teams</h2>
+            <img class="gray-svg nopaddingicon" src="./images/three_dots.svg" />
+          </div>
           <div class="tile">
             <div class="colors-container">
               <div class="color green"></div>
@@ -102,23 +111,14 @@
               <div class="color gray"></div>
             </div>
             <h3>How to use this Board</h3>
-            <img
-              class="gray-svg"
-              src="./images/lines.svg"
-              alt="horizontal lines"
-              height="20"
-            />
+            <img class="gray-svg" src="./images/lines.svg" />
           </div>
           <div class="tile">
             <div class="colors-container">
               <div class="color green"></div>
             </div>
             <h3>Product</h3>
-            <img
-              class="gray-svg"
-              src="./images/lines.svg"
-              alt="horizontal lines"
-            />
+            <img class="gray-svg" src="./images/lines.svg" />
             <img
               class="human-picture"
               src="./images/human1.jpg"
@@ -130,11 +130,7 @@
               <div class="color yellow"></div>
             </div>
             <h3>Marketing</h3>
-            <img
-              class="gray-svg"
-              src="./images/lines.svg"
-              alt="horizontal lines"
-            />
+            <img class="gray-svg" src="./images/lines.svg" />
             <img
               class="human-picture"
               src="./images/human2.jpg"
@@ -146,11 +142,7 @@
               <div class="color orange"></div>
             </div>
             <h3>Sales</h3>
-            <img
-              class="gray-svg"
-              src="./images/lines.svg"
-              alt="horizontal lines"
-            />
+            <img class="gray-svg" src="./images/lines.svg" />
             <img
               class="human-picture"
               src="./images/human3.jpg"
@@ -162,11 +154,7 @@
               <div class="color red"></div>
             </div>
             <h3>Support</h3>
-            <img
-              class="gray-svg"
-              src="./images/lines.svg"
-              alt="horizontal lines"
-            />
+            <img class="gray-svg" src="./images/lines.svg" />
             <img
               class="human-picture"
               src="./images/human4.jpg"
@@ -178,11 +166,7 @@
               <div class="color purple"></div>
             </div>
             <h3>People</h3>
-            <img
-              class="gray-svg"
-              src="./images/lines.svg"
-              alt="horizontal lines"
-            />
+            <img class="gray-svg" src="./images/lines.svg" />
             <img
               class="human-picture"
               src="./images/human5.jpg"
@@ -194,11 +178,7 @@
               <div class="color blue"></div>
             </div>
             <h3>IT</h3>
-            <img
-              class="gray-svg"
-              src="./images/lines.svg"
-              alt="horizontal lines"
-            />
+            <img class="gray-svg" src="./images/lines.svg" />
             <img
               class="human-picture"
               src="./images/human6.jpg"
@@ -210,74 +190,225 @@
               <div class="color lightblue"></div>
             </div>
             <h3>HR</h3>
+            <img class="gray-svg" src="./images/lines.svg" />
+          </div>
+          <button class="card-button">Add a card...</button>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <h2>Priorities</h2>
+            <img class="gray-svg nopaddingicon" src="./images/three_dots.svg" />
+          </div>
+          <div class="tile">
+            <div class="colors-container">
+              <div class="color orange"></div>
+            </div>
+            <h3>Increase sales revenue by 30% in Q3</h3>
+            <div>
+              <img class="gray-svg" src="./images/lines.svg" />
+              <img class="gray-svg smallpaddingicon" src="./images/clock.svg" />
+              <p class="day">Sep 30</p>
+            </div>
+          </div>
+          <div class="tile">
+            <div class="colors-container">
+              <div class="color green"></div>
+              <div class="color yellow"></div>
+            </div>
+            <h3>Launch first international expansion</h3>
+            <div>
+              <img class="gray-svg" src="./images/lines.svg" />
+              <img class="gray-svg smallpaddingicon" src="./images/clock.svg" />
+              <p class="day">Jul 22</p>
+            </div>
+          </div>
+          <div class="tile">
+            <div class="colors-container">
+              <div class="color yellow"></div>
+              <div class="color orange"></div>
+            </div>
+            <h3>Test new messaging for SMB market</h3>
+            <div>
+              <img class="gray-svg" src="./images/lines.svg" />
+            </div>
+          </div>
+          <button class="card-button">Add a card...</button>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <h2>Current Projects</h2>
+            <img class="gray-svg nopaddingicon" src="./images/three_dots.svg" />
+          </div>
+          <div class="tile">
+            <div class="colors-container">
+              <div class="color yellow"></div>
+              <div class="color blue"></div>
+              <div class="color green"></div>
+            </div>
+            <h3>Website Redesign</h3>
+            <div>
+              <img class="gray-svg" src="./images/lines.svg" />
+              <img class="gray-svg" src="./images/messages.svg" />
+              <img class="gray-svg" src="./images/paperclip.svg" />
+              <img
+                class="gray-svg smallpaddingicon"
+                src="./images/tickbox.svg"
+              />
+              <p class="day">4/5</p>
+            </div>
+            <div class="card-pictures">
+              <img
+                class="human-picture"
+                src="./images/human4.jpg"
+                alt="face of a woman"
+              />
+              <img
+                class="human-picture"
+                src="./images/human5.jpg"
+                alt="face of a man"
+              />
+              <img
+                class="human-picture"
+                src="./images/human2.jpg"
+                alt="face of a man"
+              />
+            </div>
+          </div>
+          <div class="tile">
+            <div class="colors-container">
+              <div class="color green"></div>
+              <div class="color yellow"></div>
+            </div>
+            <h3>Ship iOS app</h3>
+            <div>
+              <img class="gray-svg" src="./images/lines.svg" />
+              <img class="gray-svg nopaddingicon" src="./images/clock.svg" />
+              <p class="day">Aug 1</p>
+            </div>
+            <div class="card-pictures">
+              <img
+                class="human-picture"
+                src="./images/human1.jpg"
+                alt="face of a man"
+              />
+              <img
+                class="human-picture"
+                src="./images/human4.jpg"
+                alt="face of a man"
+              />
+            </div>
+          </div>
+          <div class="tile">
+            <div class="colors-container">
+              <div class="color yellow"></div>
+            </div>
+            <h3>Analytics Data</h3>
+            <div>
+              <img class="gray-svg" src="./images/lines.svg" />
+              <img class="gray-svg nopaddingicon" src="./images/clock.svg" />
+              <p class="day">Jul 13</p>
+            </div>
             <img
-              class="gray-svg"
-              src="./images/lines.svg"
-              alt="horizontal lines"
-              height="20"
+              class="human-picture"
+              src="./images/human6.jpg"
+              alt="face of a woman"
+            />
+          </div>
+          <div class="tile">
+            <div class="colors-container">
+              <div class="color yellow"></div>
+            </div>
+            <h3>Increase Conversion Rate by 20%</h3>
+            <div>
+              <img class="gray-svg" src="./images/lines.svg" />
+              <img class="gray-svg nopaddingicon" src="./images/clock.svg" />
+              <p class="day">Jul 22</p>
+            </div>
+            <img
+              class="human-picture"
+              src="./images/human5.jpg"
+              alt="face of a woman"
+            />
+          </div>
+          <div class="tile">
+            <div class="colors-container">
+              <div class="color lightblue"></div>
+            </div>
+            <h3>Develop Engineering Blog</h3>
+            <div>
+              <img class="gray-svg" src="./images/lines.svg" />
+              <img class="gray-svg nopaddingicon" src="./images/clock.svg" />
+              <p class="day">Jul 22</p>
+            </div>
+            <img
+              class="human-picture"
+              src="./images/human4.jpg"
+              alt="face of a woman"
+            />
+          </div>
+          <div class="tile">
+            <div class="colors-container">
+              <div class="color green"></div>
+              <div class="color yellow"></div>
+            </div>
+            <h3>Brand Guidelines</h3>
+            <div>
+              <img class="gray-svg" src="./images/lines.svg" />
+              <img class="gray-svg nopaddingicon" src="./images/clock.svg" />
+              <p class="day">Jul 22</p>
+            </div>
+            <img
+              class="human-picture"
+              src="./images/human3.jpg"
+              alt="face of a woman"
             />
           </div>
           <button class="card-button">Add a card...</button>
         </div>
         <div class="card">
-          <h2>Priorities</h2>
-          <div class="tile">
-            <div></div>
-            <h3>Increase sales revenue by 30% in Q3</h3>
-            <div></div>
+          <div class="card-title">
+            <h2>Completed Projects</h2>
+            <img class="gray-svg nopaddingicon" src="./images/three_dots.svg" />
           </div>
           <div class="tile">
-            <div></div>
-            <h3>Launch first international expansion</h3>
-            <div></div>
-          </div>
-          <div class="tile">
-            <div></div>
-            <h3>Test new messaging for SMB market</h3>
-            <div></div>
-          </div>
-          <button class="card-button">Add a card...</button>
-        </div>
-        <div class="card">
-          <h2>Current Projects</h2>
-          <div class="tile">
-            <div></div>
-            <h3>Website Redesign</h3>
-            <div></div>
-          </div>
-          <div class="tile">
-            <div></div>
-            <h3>Ship iOS app</h3>
-            <div></div>
-          </div>
-          <div class="tile">
-            <div></div>
-            <h3>Analytics Data</h3>
-            <div></div>
-          </div>
-          <div class="tile">
-            <div></div>
-            <h3>Brand Guidelines</h3>
-            <div></div>
-          </div>
-          <button class="card-button">Add a card...</button>
-        </div>
-        <div class="card">
-          <h2>Completed Projects</h2>
-          <div class="tile">
-            <div></div>
+            <div class="colors-container">
+              <div class="color yellow"></div>
+            </div>
             <h3>Social Media Campaign</h3>
-            <div></div>
+            <div>
+              <img class="gray-svg" src="./images/lines.svg" />
+              <img class="gray-svg nopaddingicon" src="./images/clock.svg" />
+              <p class="day">Jul 22</p>
+            </div>
+            <img
+              class="human-picture"
+              src="./images/human3.jpg"
+              alt="face of a woman"
+            />
           </div>
           <div class="tile">
-            <div></div>
+            <div class="colors-container">
+              <div class="color red"></div>
+            </div>
             <h3>Update Help Documentation</h3>
-            <div></div>
+            <div>
+              <img class="gray-svg" src="./images/lines.svg" />
+              <img class="gray-svg nopaddingicon" src="./images/clock.svg" />
+              <p class="day">Jul 22</p>
+            </div>
+            <img
+              class="human-picture"
+              src="./images/human6.jpg"
+              alt="face of a man"
+            />
           </div>
           <button class="card-button">Add a card...</button>
         </div>
         <div class="card">
-          <h2>Projects for year 2111</h2>
+          <div class="card-title">
+            <h2>Projects for year 2111</h2>
+            <img class="gray-svg nopaddingicon" src="./images/three_dots.svg" />
+          </div>
           <div class="tile">
             <div></div>
             <h3>Space Race</h3>

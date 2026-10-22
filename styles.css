@@ -43,6 +43,7 @@ body {
 }
 
 h3 {
+  font-size: 18px;
   font-weight: normal;
   padding: 10px 0;
 }
@@ -57,16 +58,36 @@ h3 {
   align-items: center;
 }
 
+#navbar div {
+  margin: 0 10px;
+}
+
+#navbar div img {
+  margin: 0;
+  padding: 5px 5px 5px 30px;
+}
+
+#profile-picture {
+  width: 30px;
+  height: auto;
+}
+
 #cards-container {
   align-items: start;
 }
 
-#headbar div {
-  width: 25%;
-}
-
 #headbar {
   background: rgb(0 0 0 / 20%);
+}
+
+#headbar div {
+  width: 25%;
+  justify-content: flex-end;
+}
+
+#logo {
+  height: 30px;
+  width: auto;
 }
 
 button,
@@ -103,9 +124,23 @@ button,
   max-height: calc(100vh - 200px);
 }
 
+.card-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+h3 + div {
+  display: flex;
+}
+
 .card-button {
   color: darkgray;
   background-color: lightgray;
+  padding: 0;
+}
+
+.day {
+  color: darkgray;
 }
 
 .tile {
@@ -119,15 +154,22 @@ button,
   flex-direction: column;
 }
 
+.card-pictures {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .human-picture {
-  width: 50px;
+  width: 40px;
   height: auto;
   align-self: end;
+  padding: 5px;
 }
 
 .colors-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); */
+  grid-template-columns: repeat(5, 1fr);
   gap: 2px;
 }
 
@@ -179,6 +221,12 @@ button,
 
 .white-svg {
   filter: invert(100%) hue-rotate(90deg) brightness(100%) contrast(100%);
+  width: 30px;
+  height: auto;
+}
+
+#search-icon {
+  width: 80px;
 }
 
 .gray-svg {
@@ -186,4 +234,13 @@ button,
   align-self: flex-start;
   width: 20px;
   height: auto;
+  padding-right: 20px;
+}
+
+.smallpaddingicon {
+  padding-right: 5px;
+}
+
+.nopaddingicon {
+  padding-right: 0;
 }
